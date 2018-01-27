@@ -4,14 +4,15 @@ int get_lines(int sum);
 int putALotChar(int n, char ch);
 
 int main(){
-    int num, numOfChar;
+    int num, numOfChar, totalLines;
     char ch;
     scanf("%d %c", &num, &ch);
     int const line = get_lines(num);
+    int const totalLines = line * 2 + 1;
 
-    for(int level = 0; level < (line * 2 + 1); level++){
+    for(int level = 0; level < totalLines; level++){
         if(level < line){
-            numOfChar = (1 + 2 * line) - (level * 2);
+            numOfChar = totalLines - (level * 2);
             putALotChar(level, ' ');
             putALotChar(numOfChar, ch);
             putchar('\n');
