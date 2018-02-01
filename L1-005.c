@@ -2,27 +2,25 @@
 #include <stdlib.h>
 typedef struct{
     long long id;
-    short shiji;
-    short kaoshi;
+    int kaoshi;
 }PAT;
 int main(){
     int s;
     PAT * pe;
     scanf("%d", &s);
     pe = (PAT *)malloc(s * sizeof(PAT));
+    long long swap;
+    int shiji, kaoshi;
     for(int i = 0;i < s;i++){
-        scanf("%lld%d%d", &pe[i].id, &pe[i].shiji, &pe[i].kaoshi);
+        scanf("%lld%d%d", &swap, &shiji, &kaoshi);
+	pe[shiji - 1].id = swap;
+	pe[shiji - 1].kaoshi = kaoshi;
     }
-    int num, shiji;
+    int num;
     scanf("%d", &num);
     for(int i = 0;i < num;i++){
         scanf("%d", &shiji);
-        for(int i = 0; i < s; i++){
-            if(pe[i].shiji == shiji){
-                printf("%lld %d\n", pe[i].id, pe[i].kaoshi);
-                break;
-            }
-        }
+        printf("%lld %d\n", pe[shiji - 1].id, pe[shiji - 1].kaoshi);
     }
     free(pe);
     return 0;
