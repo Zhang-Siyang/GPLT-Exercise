@@ -1,6 +1,9 @@
 #include <stdio.h>
 
 int main(){
-    printf("This is a simple problem.");
+    char st[25] = "This is a simple problem.";
+    for(char i = 0; st[i] != '\0'; i++){
+        putchar(st[i]);
+    }
     return 0;
 }
