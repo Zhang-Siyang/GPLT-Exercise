@@ -5,10 +5,8 @@ int main(){
     float beishu = 1;
     scanf("%s", &num);
     for(i = 0; num[i] != '\0'; i++){
-        if(num[i] == '2'){
+        if(num[i] == '2')
             hc++;
-            printf("#num[%d] == 2!#", i);
-        }
     }
     len = i;
     if(len == 0)
