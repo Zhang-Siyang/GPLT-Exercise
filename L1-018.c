@@ -12,7 +12,7 @@ int main(){
     /* int time = h * 100 + h? */
     if(h>=0 && h <= 11){/* 也许可以用一个符号函数混合 switch 来搞 */
         printNo(h, m);
-    } else if(h == 11 && m == 0){
+    } else if(h == 12 && m == 0){
         printNo(h, m);
     } else if(m == 0){
         dang(h - 12);
