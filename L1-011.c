@@ -1,7 +1,7 @@
-#include <stdio.h>  //首次写出的代码, 以四个测试超时三个通过一个告败, 稍后上传更优代码
+#include <stdio.h>
 
 int main(){
-	char in[10000];
+	char in[10001];
 	char ignore, get;
 	int position;
 
@@ -19,7 +19,10 @@ int main(){
         }
 	}
 
-	printf("%s", in);
+    for(position = 0; in[position] != '\0'; position++){
+        if(in[position] != '\007')
+            putchar(in[position]);
+    }
 
 	return 0;
 }
