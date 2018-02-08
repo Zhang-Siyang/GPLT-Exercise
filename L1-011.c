@@ -10,8 +10,6 @@ int main(){
     }
     in[position] = '\0';
 
-    printf("#Got:%s#", in);
-
 	while((ignore = getchar()) != '\n'){
 		position = 0;
 		while(in[position] != '\0'){
@@ -20,7 +18,9 @@ int main(){
             position++;
         }
 	}
+
 	printf("%s", in);
+
 	return 0;
 }
 
